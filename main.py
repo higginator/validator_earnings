@@ -1,8 +1,10 @@
 from flask import Flask, json
+from flask_cors import CORS
 import requests
 from thousand_validators import *
 
 app = Flask(__name__)
+CORS(app)
 
 """
     Endpoint returns a JSON string of the validators in the Polkadot Thousand Validators Programme.
